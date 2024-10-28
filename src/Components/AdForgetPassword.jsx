@@ -13,7 +13,7 @@ const AdForgetPassword = () => {
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     console.log(values);    
     axios
-      .post("https://coffee-web-backend.vercel.app/admin/adminforgotpassword", values)
+      .post("https://coffee-web-backend.onrender.com/admin/adminforgotpassword", values)
       .then((res) => {        
         Swal.fire({
           icon: "success",

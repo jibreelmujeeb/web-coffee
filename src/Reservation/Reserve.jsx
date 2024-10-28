@@ -10,14 +10,13 @@ import Footer from "../Components/Footer";
 const Reserve = () => {
   const navigate = useNavigate();
 
-  // Check if user is logged in
   useEffect(() => {
     if (!localStorage.user) {
       navigate("/login");
     }
   }, [navigate]);
 
-  // Initialize form state
+  
   const [first, setFirst] = useState(JSON.parse(localStorage.getItem("user")));
   const [formData, setFormData] = useState({
     email: first?.email || "",
@@ -30,10 +29,10 @@ const Reserve = () => {
     amount: 0,
     menuSelect: [],
     menuAmounts: {},
-    paymentType: true, // Object to store amounts for each menu item
+    paymentType: true, 
   });
 
-  // Handle input change
+ 
   const handleChange = (e) => {
     const { name, value, type, options, checked } = e.target;
     if (type === "select-multiple") {
@@ -62,7 +61,7 @@ const Reserve = () => {
     }
   };
 
-  // Handle amount change for menu items
+ 
   const handleMenuAmountChange = (menu, amount) => {
     setFormData({
       ...formData,
@@ -88,30 +87,29 @@ const Reserve = () => {
   const calculateTotalAmount = (formData) => {
     const { menuSelect, menuAmounts } = formData;
 
-    // Calculate total amount based on selected menu and their quantities
+    
     const totalAmount = menuSelect.reduce((total, menu) => {
-      const quantity = parseInt(menuAmounts[menu], 10); // Ensure quantity is treated as a number
+      const quantity = parseInt(menuAmounts[menu], 10); 
       const price = menuPrices[menu];
 
-      // Ensure we only calculate if the menu item exists in the prices list and has a valid quantity
       if (price && quantity > 0) {
         total += price * quantity;
       }
 
       return total;
-    }, 0); // 0 is the initial value of the total amount
+    }, 0); 
 
     return totalAmount;
   };
 
-  // Handle form submission
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Calculate the total amount based on the selected menu items
+    
     let totalAmount = calculateTotalAmount(formData);
 
-    // Ensure menuSelect is properly formatted
+    
     const formattedMenuSelect = formData.menuSelect.map((menuItem) => ({
       name: menuItem,
       amount: formData.menuAmounts[menuItem],
@@ -121,7 +119,7 @@ const Reserve = () => {
       .post("https://coffee-web-backend.onrender.com/booking", {
         ...formData,
         amount: totalAmount,
-        menuSelect: formattedMenuSelect, // Include formatted menuSelect data
+        menuSelect: formattedMenuSelect, 
       })
       .then((response) => {
         if (response.data.status) {

@@ -10,7 +10,7 @@ const Adsignin = () => {
         password: "",
       });
       
-      const [showPassword, setShowPassword] = useState(false); // State for password visibility
+      const [showPassword, setShowPassword] = useState(false); 
     
       const navigate = useNavigate();
     
@@ -52,7 +52,7 @@ const Adsignin = () => {
       };
     
       const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword); // Toggle password visibility
+        setShowPassword(!showPassword); 
       };
   return (
     <>

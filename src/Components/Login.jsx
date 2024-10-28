@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const LoginForm = () => {
     const navigate = useNavigate();
-    const [showPassword, setShowPassword] = useState(false); // State for password visibility
+    const [showPassword, setShowPassword] = useState(false); 
 
     const validationSchema = Yup.object({
         email: Yup.string().email('Invalid email').required('Email is required'),
@@ -48,7 +48,7 @@ const LoginForm = () => {
     };
 
     const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword); // Toggle password visibility
+        setShowPassword(!showPassword); 
     };
 
     return (

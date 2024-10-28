@@ -91,16 +91,16 @@ const BookingHistory = () => {
     if (!menuSelect) return 0;
 
     const totalAmount = menuSelect.reduce((total, menu) => {
-      const price = menuPrices[menu.name]; // Use menu.name to fetch the price
-      const quantity = parseInt(menu.amount, 10); // Get the quantity
+      const price = menuPrices[menu.name]; 
+      const quantity = parseInt(menu.amount, 10); 
 
-      // Ensure the price exists and the quantity is valid
+      
       if (price && quantity > 0) {
-        total += price * quantity; // Multiply price by quantity
+        total += price * quantity; 
       }
 
       return total;
-    }, 0); // Start with a total of 0
+    }, 0); 
 
     return totalAmount;
   };  
