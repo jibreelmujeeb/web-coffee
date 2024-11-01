@@ -7,7 +7,7 @@ import img6 from "../assets/images/reviews/young-woman-with-round-glasses-yellow
 import img7 from "../assets/images/reviews/senior-man-white-sweater-eyeglasses.jpg";
 import img8 from "../assets/images/reviews/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair.jpg";
 import videoSrc from "../assets/images/pexels-mike-jones-9046237.mp4";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef,} from "react";
 import Loader from "../Components/Loader";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
