@@ -22,16 +22,16 @@ const Navbar = () => {
                     <Link  className="nav-link smoothscroll" to="/home">Home</Link >
                   </li>
                   <li className="nav-item">
-                    <a  className="nav-link smoothscroll" href="#section_2">About</a>
+                    <a  className="nav-link smoothscroll" href="#about_2">About</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link smoothscroll" href="#section_3">Our Menu</a>
+                    <a className="nav-link smoothscroll" href="#ourmenu_3">Our Menu</a>
                   </li>
                   <li className="nav-item">
                     <a  className="nav-link smoothscroll" href="#section_4">Reviews</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link smoothscroll" href="#section_5">Contact</a>
+                    <a className="nav-link smoothscroll" href="#contact_5">Contact</a>
                   </li>
                   <li className="nav-item">
                     <Link  className="nav-link smoothscroll" to="/history">History</Link >
