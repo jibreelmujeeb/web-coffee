@@ -93,7 +93,7 @@ const LoginForm = () => {
                             </Form>
                         )}
                     </Formik>
-                    Does not have an account? <a href="/signup" style={{ fontWeight: "bold" }}>Signup</a>
+                    Does not have an account? <Link to="/signup" style={{ fontWeight: "bold" }}>Signup</Link>
                 </div>
             </div>
         </div>
