@@ -13,11 +13,11 @@ const Admin = () => {
     axios
       .post("https://coffee-web-backend.onrender.com/admin/bookings", { fetch: true })
       .then((response) => {
-        console.log(response.data);
+        
         setallBooking(response.data.bookings);
       })
       .catch((error) => {
-        console.log(error);
+       
       });
   };
   const [activAdmin, setactivAdmin] = useState(false);
@@ -27,7 +27,7 @@ const Admin = () => {
         email: admindet?.email,
       })
       .then((response) => {
-        console.log(response.data);
+        
 
         if (response.data.status) {
           // getbooking()
@@ -46,7 +46,7 @@ const Admin = () => {
     axios
       .post("https://coffee-web-backend.onrender.com/admin/deliver", { bkId })
       .then((response) => {
-        console.log(response.data);
+       
         if (response.status) {
           Swal.fire({
             icon: "success",
@@ -80,7 +80,7 @@ const Admin = () => {
         email: admindet?.email,
       })
       .then((response) => {
-        console.log(response.data);
+        
         if (response.data.status) {
           setfirstAdmin(true);
           getAllAdmin();
@@ -97,7 +97,7 @@ const Admin = () => {
     axios
       .post("https://coffee-web-backend.onrender.com/admin/activation", { email, act })
       .then((response) => {
-        console.log(response.data);
+        
         if (response.data.status) {
           Swal.fire({
             icon: "success",
@@ -136,7 +136,7 @@ const Admin = () => {
       });
   };
 
-  console.log(allBooking);
+
   
   return (
     <div>

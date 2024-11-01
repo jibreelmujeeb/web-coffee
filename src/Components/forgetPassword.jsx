@@ -32,7 +32,7 @@ const ForgotPassword = () => {
         });
       }
     } catch (error) {
-      console.error('Error:', error.response);
+     
       Swal.fire({
         icon: "error",
         title: "An error occurred",

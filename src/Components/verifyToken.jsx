@@ -27,7 +27,7 @@ const AdminToken = () => {
           },
         })
         .then((result)=>{
-            console.log(result.data);
+            
             if(result.data.status){
                 navigate('/admin/dashboard'); 
             }else{

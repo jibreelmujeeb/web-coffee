@@ -11,7 +11,7 @@ const AdForgetPassword = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
-    console.log(values);    
+     
     axios
       .post("https://coffee-web-backend.onrender.com/admin/adminforgotpassword", values)
       .then((res) => {        

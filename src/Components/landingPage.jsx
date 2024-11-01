@@ -1,5 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
@@ -9,8 +10,8 @@ const LandingPage = () => {
           <h1>Jibreel Coffee Shop</h1>
           <p>Where every cup is brewed to perfection!</p>
           <div className="button-group">
-            <a href="/login" className="btn btn1">Login</a>
-            <a href="/signup" className="btn btn2">Sign Up</a>
+            <Link to="/login" className="btn btn1">Login</Link>
+            <Link to="/signup" className="btn btn2">Sign Up</Link>
           </div>
         </div>
       </header>

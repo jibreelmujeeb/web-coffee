@@ -7,10 +7,10 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
             <div className="container">
-              <a className="navbar-brand d-flex align-items-center" href="/home">
+              <Link  className="navbar-brand d-flex align-items-center" to="/home">
                 <img src={img1} className="navbar-brand-image img-fluid" alt="Barista Cafe Template" />
                 Jibreel
-              </a>
+              </Link >
     
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -19,28 +19,28 @@ const Navbar = () => {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ms-lg-auto">
                   <li className="nav-item">
-                    <a className="nav-link smoothscroll" href="/home">Home</a>
+                    <Link  className="nav-link smoothscroll" to="/home">Home</Link >
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link smoothscroll" href="#section_2">About</a>
+                    <Link  className="nav-link smoothscroll" to="#section_2">About</Link >
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link smoothscroll" href="#section_3">Our Menu</a>
+                    <Link  className="nav-link smoothscroll" to="#section_3">Our Menu</Link >
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link smoothscroll" href="#section_4">Reviews</a>
+                    <Link  className="nav-link smoothscroll" to="#section_4">Reviews</Link >
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link smoothscroll" href="#section_5">Contact</a>
+                    <Link  className="nav-link smoothscroll" to="#section_5">Contact</Link >
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link smoothscroll" href="/history">History</a>
+                    <Link  className="nav-link smoothscroll" to="/history">History</Link >
                   </li>
                   <li className="nav-item" onClick={()=>{
                     localStorage.removeItem('user'), 
                     !localStorage.user?navigate('/login'):null
                     }}>
-                    <a className="nav-link smoothscroll" ><i className="bi bi-box-arrow-left"></i></a>
+                    <Link  className="nav-link smoothscroll" ><i className="bi bi-box-arrow-left"></i></Link >
                   </li>
                 </ul>
     

@@ -129,17 +129,17 @@ const Adsignin = () => {
                         </div>
 
                         <Link to='/admin/forgot-password'>
-                          <a className="small text-muted" href="#!">Forgot password?</a>
+                          <Link className="small text-muted" to="#!">Forgot password?</Link>
                         </Link>
                         <br />
                         <span>Don't have an account?</span>
-                        <a
-                          href="/admin/signup"
+                        <Link
+                          to="/admin/signup"
                           target="_blank"
                           style={{ color: "#393f81" }}
                         >
                           Register here
-                        </a>
+                        </Link>
                       </form>
                     </div>
                   </div>

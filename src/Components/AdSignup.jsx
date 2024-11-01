@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import logo from '../assets/images/coffee-beans.png'
 import axios from 'axios';
 import Swal from "sweetalert2";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AdSignup = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +20,7 @@ const AdSignup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('https://coffee-web-backend.onrender.com/admin/signup', formData).then((result)=>{
-        console.log(result);
+        
         if(result.data.status){
             Swal.fire({
                 icon: "success",
@@ -113,10 +113,10 @@ const AdSignup = () => {
                           </button>
                         </div>
 
-                        <a className="small text-muted" href="#!">Forgot password?</a>
+                        <Link className="small text-muted" to="#!">Forgot password?</Link>
                         <br />
                         <span>Have an account?</span>
-                        <a href="/admin/login" style={{ color: "#393f81" }}>Login here</a>
+                        <Link to="/admin/login" style={{ color: "#393f81" }}>Login here</Link>
 
                       </form>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Signup.css";
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -24,7 +24,7 @@ const SignupForm = () => {
             initialValues={{ fullname: "", email: "", password: "" }}
             validationSchema={validationSchema}
             onSubmit={(values) => {
-              console.log(values);
+              
 
               axios
                 .post("https://coffee-web-backend.onrender.com/signup", values)
@@ -43,7 +43,7 @@ const SignupForm = () => {
                       icon: "error",
                       title: 'Oops!',
                       text: response.data.msg,
-                      footer: `<a href="/login">Navigate To Login Page?</a>`,
+                      footer: `<Link to="/login">Navigate To Login Page?</Link>`,
                     });
                   }
                 })
@@ -118,7 +118,7 @@ const SignupForm = () => {
             )}
           </Formik>
         
-          Already have an account? <a href="/login">Login</a>
+          Already have an account? <Link to="/login">Login</Link>
         </div>
       </div>
     </div>
