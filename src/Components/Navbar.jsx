@@ -28,7 +28,7 @@ const Navbar = () => {
                     <a className="nav-link smoothscroll" href="#ourmenu_3">Our Menu</a>
                   </li>
                   <li className="nav-item">
-                    <a  className="nav-link smoothscroll" href="#section_4">Reviews</a>
+                    <a  className="nav-link smoothscroll" href="#Reviews_4">Reviews</a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link smoothscroll" href="#contact_5">Contact</a>

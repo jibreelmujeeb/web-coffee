@@ -80,7 +80,7 @@ const Home = () => {
       <Navbar />
       <section
         className="hero-section d-flex justify-content-center align-items-center"
-        id="section_1"
+        id="Home_1"
       >
         <div className="container">
           <div className="row align-items-center">
@@ -113,7 +113,7 @@ const Home = () => {
         <div className="hero-slides"></div>
       </section>
 
-      <section className="about-section section-padding" id="section_2">
+      <section className="about-section section-padding" id="about_2">
         <div className="section-overlay"></div>
         <div className="container">
           <div className="row align-items-center">
@@ -291,7 +291,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="menu-section section-padding" id="section_3">
+      <section className="menu-section section-padding" id="ourmenu_3">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-12 mb-4 mb-lg-0">
@@ -471,7 +471,7 @@ const Home = () => {
 
       <section
         className="reviews-section section-padding section-bg"
-        id="section_4"
+        id="Reviews_4"
       >
         <div className="container">
           <div className="row justify-content-center">
@@ -602,7 +602,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="contact-section section-padding" id="section_5">
+      <section className="contact-section section-padding" id="contact_5">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-12">
