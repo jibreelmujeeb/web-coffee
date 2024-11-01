@@ -129,7 +129,8 @@ const Adsignin = () => {
                         </div>
 
                         <Link to='/admin/forgot-password'>
-                          <Link className="small text-muted" to="#!">Forgot password?</Link>
+
+                          <Link className="small text-muted" to="/admin/forgot-password">Forgot password?</Link>
                         </Link>
                         <br />
                         <span>Don't have an account?</span>
